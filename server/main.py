@@ -3,7 +3,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from dotenv import load_dotenv
 import os
 from database import init_db
-from routers import auth as auth_router, vault as vault_router
+from routers import auth as auth_router, vault as vault_router, generator as gen_router
 
 load_dotenv()
 
@@ -23,6 +23,7 @@ def startup():
 
 app.include_router(auth_router.router)
 app.include_router(vault_router.router)
+app.include_router(gen_router.router)
 
 @app.get("/health")
 def health():

@@ -1,6 +1,6 @@
 # Password Manager
 
-Zero-knowledge password vault — all credentials are encrypted client-side before storage.
+Password vault that stores credentials encrypted at rest. Encryption and decryption run on the server, with a key derived from the master password.
 
 ## Stack
 
